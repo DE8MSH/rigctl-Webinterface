@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Remote RX</title>
+<SCRIPT LANGUAGE=javascript>
+var  baseuri = "/cgi-bin/set.cgi?";
+var audio = null;
+function tune(freq) {
+	if (audio != null) {
+		audio.src = baseuri + freq;
+		audio.load();
+		audio.play();
+	}
+}
+function freqChanged() {
+	var freq = document.fmrx.frequency.value;
+	if (freq != null)
+		tune(freq);
+}
+function stop() {
+	if (audio != null)
+		audio.pause();
+	audio = null;
+}
+function start() {
+ 	var freq = document.fmrx.frequency.value;
+   try {
+	   if (audio == null)
+		   audio = new Audio("");
+	   tune(freq);
+	} catch(e) {
+		audio = null;
+	}
+}
+function buz() {
+ 	var freq = 4625000;
+   try {
+	   if (audio == null)
+		   audio = new Audio("");
+	   tune(freq);
+	} catch(e) {
+		audio = null;
+	}
+}
+function pip() {
+ 	var freq = 3828000;
+   try {
+	   if (audio == null)
+		   audio = new Audio("");
+	   tune(freq);
+	} catch(e) {
+		audio = null;
+	}
+}
+function sqw() {
+ 	var freq = 3756000;
+   try {
+	   if (audio == null)
+		   audio = new Audio("");
+	   tune(freq);
+	} catch(e) {
+		audio = null;
+	}
+}
+</SCRIPT>
+</head>
+<body onLoad="freqChanged()">
+<h1>Set RX frequency</h1>
+<FORM name="fmrx" onsubmit="return false;">
+<P>Frequency: <INPUT name="frequency" VALUE="14025000"
+	onChange="freqChanged();">
+<INPUT TYPE="BUTTON" onClick="start();" VALUE="Goto"><br>
+<INPUT TYPE="BUTTON" onClick="buz();" VALUE="Buzzer">
+<INPUT TYPE="BUTTON" onClick="pip();" VALUE="Pip">
+<INPUT TYPE="BUTTON" onClick="sqw();" VALUE="Squeaky Wheel">
+</FORM>
+</body> </html>

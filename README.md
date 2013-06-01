@@ -35,3 +35,11 @@ And to DK7MW for his idea to remote control a rig with help of CGI script and Ic
 > http://www.darc.de/cq-dl/cq-dl-digital volume CQDL 06-2013 
 
 Thank you, guys!
+
+===================
+
+Todo:
+
+Clean up
+Expand functions 
+Etc pp

@@ -13,7 +13,7 @@ sudo apt-get install libhamlib-utils
 
 cd ~/
 
-git pull https://github.com/DE8MSH/rigctl-Webinterface.git
+git clone https://github.com/DE8MSH/rigctl-Webinterface.git
 
 cd rigctl-Webinterface
 

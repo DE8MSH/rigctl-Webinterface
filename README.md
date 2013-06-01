@@ -9,8 +9,6 @@ Usage:
 
 sudo apt-get install libhamlib-utils
 
-*** Create directory named 'web' and clone repo
-
 cd ~/
 
 git clone https://github.com/DE8MSH/rigctl-Webinterface.git

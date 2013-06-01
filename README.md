@@ -9,7 +9,7 @@ Usage:
 
 sudo apt-get install libhamlib-utils
 
-*** Create directory named 'web' and pull repo
+*** Create directory named 'web' and clone repo
 
 cd ~/
 
